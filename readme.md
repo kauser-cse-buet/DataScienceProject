@@ -27,5 +27,4 @@ The project will have the following modules:
 
 ## Model
 ## Visualization
-- 
 ## Validation
