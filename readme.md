@@ -27,4 +27,5 @@ The project will have the following modules:
 
 ## Model
 ## Visualization
+1. Top and bottom popular movie (by imdb score)
 ## Validation
