@@ -27,6 +27,9 @@ The project will have the following modules:
 
 ## Model
 ## Visualization
-1. Top and bottom popular movie (by imdb score)
+1. Top and bottom popular movie (by imdb score) grouped by country.
 2. Find the 10 most liked directors, actors.
+3. Most profitable movies grouped by countries. 
+4. Duration and movies grouped by year/country.
+5.  
 ## Validation
