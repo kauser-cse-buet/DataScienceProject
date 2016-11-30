@@ -28,4 +28,5 @@ The project will have the following modules:
 ## Model
 ## Visualization
 1. Top and bottom popular movie (by imdb score)
+2. Find the 10 most liked directors, actors.
 ## Validation
