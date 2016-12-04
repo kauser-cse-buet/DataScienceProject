@@ -8,6 +8,21 @@ def getHeaders():
     global data
     return list(data.dtypes.keys())
 
+def getX_y(targetColumn, featureColumns = None):
+    global data
+    
+    data_copy = data.copy()
+
+    y  = data_copy[targetColumn]
+    if featureColumns != None:
+        X = data_copy[featureColumns]
+    else:
+        X = data_copy.drop(targetColumn, 1)
+        
+    return X,y
+
+
+
 
 # def show_corr_numerical_values():
 #     features = ['num_critic_for_reviews', 'duration', 'director_facebook_likes', 'actor_1_facebook_likes', 'gross', 'num_user_for_reviews', 'budget', 'title_year', 'imdb_score', 'aspect_ratio', 'movie_facebook_likes']
