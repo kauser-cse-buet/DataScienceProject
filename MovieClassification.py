@@ -6,6 +6,7 @@ from sklearn import metrics, svm
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.naive_bayes import GaussianNB
 import time
+import Preprocessor
 
 def train_and_evaluate(clf, X_train, X_test, y_train, y_test):
 	start = time.time()
@@ -47,9 +48,9 @@ data = data[features_allnum]
 
 data = data.dropna(how='any')
 
-x = data[features_x]
-y =data[feature_y]
-
+#x = data[features_x]
+#y =data[feature_y]
+x, y = Preprocessor.getX_y(features_allnum, feature_y)
 print(y[1:5])
 
 cut_off = 8
