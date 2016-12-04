@@ -50,7 +50,7 @@ data = data.dropna(how='any')
 
 #x = data[features_x]
 #y =data[feature_y]
-x, y = Preprocessor.getX_y(features_allnum, feature_y)
+x, y = Preprocessor.getX_y(feature_y, features_allnum)
 print(y[1:5])
 
 cut_off = 8
