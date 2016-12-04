@@ -54,3 +54,12 @@ Mean Squared Error     : 2.11567515688e+15
 Median Absolute Error  : 10256857.0
 Explained Var Score    : 0.477276813998
 R^2 Score              : 0.459857366497
+
+
+## text feature inclusions
+if we add text plot_keywords, genres, as features. 
+it improves result score and reduce error. 
+visualisation: 
+corelation between plot_keywords, genres and imdb.
+related imdb score has similar genres. 
+
