@@ -99,12 +99,12 @@ def handle_submit(sender):
     else:
         featureToSortOn = 'imdb_score'
 
-    recommend_movie = suggester(movieNameText.value, 10, featureToSortOn)
-    if recommend_movie is None:
+    suggestedMovies = suggester(movieNameText.value, 10, featureToSortOn)
+    if suggestedMovies is None:
         movieSimilarTitle = getMovieSimilarTitle(movieNameText.value)
         SimilarMovieNameText.value = "Incorrect Movie Name!!!!!" + " You can try: " + str(movieSimilarTitle)
     else:
-        SimilarMovieNameText.value = str(recommend_movie)
+        SimilarMovieNameText.value = str(suggestedMovies)
 
 
 movieNameText.on_submit(handle_submit)
