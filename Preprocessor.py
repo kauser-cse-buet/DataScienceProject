@@ -3,6 +3,7 @@ import numpy as np
 
 global data
 data = pd.read_csv("movie_metadata.csv").dropna()
+data['movie_title'] = [i.replace("\xa0","") for i in list(data['movie_title'])]
 
 def getHeaders():
     global data
@@ -18,9 +19,8 @@ def getX_y(targetColumn, featureColumns = None):
         X = data_copy[featureColumns]
     else:
         X = data_copy.drop(targetColumn, 1)
-        
-    return X,y
 
+    return X,y
 
 
 
@@ -51,6 +51,5 @@ def getX_y(targetColumn, featureColumns = None):
 
 
 # print(imdb_movie)
-
 
 
