@@ -57,18 +57,18 @@ R^2 Score              : 0.459857366497
 
 
 ## text feature inclusions
-if we add text plot_keywords, genres, as features. 
-it improves result score and reduce error. 
-visualisation: 
-corelation between plot_keywords, genres and imdb.
-related imdb score has similar genres. 
+- if we add text plot_keywords, genres, as features. 
+- it improves result score and reduce error. 
+- visualisation: 
+- corelation between plot_keywords, genres and imdb.
+- related imdb score has similar genres. 
 ## statistics 
-x wise movie budget 
-x wise movie profit
-x wise imdb score
-x = country , year, genre
+- x wise movie budget 
+- x wise movie profit
+- x wise imdb score
+- x = country , year, genre
 
-genre wise budget, profit, imdb score.
+- genre wise budget, profit, imdb score.
 
 
 
