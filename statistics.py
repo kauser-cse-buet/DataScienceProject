@@ -13,6 +13,8 @@ from sklearn.decomposition import PCA
 import numpy as np
 import matplotlib.pyplot as plt
 
+%pylab inline
+
 data = preproc.data
 headers = preproc.getHeaders()
 
@@ -41,6 +43,3 @@ for i in range(len(nameList)):
             dataGroupByAgg = getDataGroupByAgg(nameList[i], targetList[j], aggFuncList[k], 10)
             dataGroupByAgg.plot(kind='barh', title= nameList[i] + " vs "+ targetList[j] + "(" + aggFuncList[k] + ")")
             plt.show()
-
-
-print(headers)
