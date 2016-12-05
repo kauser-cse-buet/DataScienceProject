@@ -4,6 +4,18 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn import metrics, preprocessing, cross_validation
 
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import MultinomialNB
+from sklearn import (linear_model,cross_validation)
+from sklearn.tree import DecisionTreeClassifier, export_graphviz
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
+from sklearn import metrics, svm
+from sklearn.linear_model import LogisticRegressionCV
+from sklearn.naive_bayes import GaussianNB
+import time
 
 RegressorModel = ['RandomForestRegressor']
 ClassifierModel = []
@@ -38,6 +50,39 @@ def evaluateAllRegressionByCrossValidation(X, y):
 
         printCrossValidationResult(clf, X, y, 'regressor')
 
+    # For classification
+def train_and_evaluate(clf, X_train, X_test, y_train, y_test):
+    start = time.time()
+    clf.fit(X_train, y_train)
+    # print("Accuracy on training set:", clf.score(X_train, y_train))
+    # print("Accuracy on testing set:", clf.score(X_test, y_test))
+    y_pred = clf.predict(X_test)
+    print("Classification Report:\n", metrics.classification_report(y_test, y_pred))
+    # print("Confusion Matrix:\n", metrics.confusion_matrix(y_test, y_pred))
+    # print("Running time:", time.time()-start)
 
+def evaluateClassification(x,y,train_size=0.5):
+    x_train,x_test,y_train,y_test = train_test_split(x,y,train_size=0.5)
+    print('------------Decision Tree method')
+    train_and_evaluate(DecisionTreeClassifier(),x_train,x_test,y_train,y_test)
+    print('------------Extra Trees method')
+    train_and_evaluate(ExtraTreesClassifier(),x_train,x_test,y_train,y_test)
+    print('------------Random Forest method')
+    train_and_evaluate(RandomForestClassifier(),x_train,x_test,y_train,y_test)
+    print('------------SVC method')
+    train_and_evaluate(svm.SVC(),x_train,x_test,y_train,y_test)
+    print('------------Logit method')
+    train_and_evaluate(LogisticRegressionCV(),x_train,x_test,y_train,y_test)
+    print('------------GaussianNaiveBayes method')
+    train_and_evaluate(GaussianNB(),x_train,x_test,y_train,y_test)
 
-    
+def crossvalidationClassification(x, y):
+    print("---------Naïve Bayes  --------------")
+    classifier = MultinomialNB()
+    classifier.fit(x, y)
+    cv_f1_scores = cross_validation.cross_val_score(classifier, x, y, cv=5, scoring='f1')
+    cv_precision_scores = cross_validation.cross_val_score(classifier, x, y, cv=5,scoring='precision')
+    cv_recall_scores = cross_validation.cross_val_score(classifier, x, y, cv=5,scoring='recall')
+    print('vectorization Precision=',cv_precision_scores.mean())
+    print('vectorization Recall=',cv_recall_scores.mean())
+    print('vectorization F1=', cv_f1_scores.mean())
