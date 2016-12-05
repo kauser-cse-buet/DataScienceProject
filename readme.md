@@ -62,4 +62,16 @@ it improves result score and reduce error.
 visualisation: 
 corelation between plot_keywords, genres and imdb.
 related imdb score has similar genres. 
+## statistics 
+x wise movie budget 
+x wise movie profit
+x wise imdb score
+x = country , year, genre
+
+genre wise budget, profit, imdb score.
+
+
+
+
+
 
