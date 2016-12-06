@@ -1,5 +1,5 @@
 import Preprocessor as preproc
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn import metrics, preprocessing, cross_validation
@@ -10,7 +10,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import (linear_model,cross_validation)
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
 from sklearn import metrics, svm
 from sklearn.linear_model import LogisticRegressionCV
@@ -31,32 +31,24 @@ def printEvaluation(clf, X_train, y_train, X_test, y_test, CLFType):
     elif CLFType.lower() == 'classifier_multiclass':
         pass
         
-def printCrossValidationResult(clf, X, y, CLFType):
-    Result = {}
+def printCrossValidationResult(clf, X, y, CLFType):    
+    print("Cross Validation")
     if CLFType.lower() == 'regressor':
-        # result = cross_validation.cross_val_score(clf, X, y, scoring="neg_mean_squared_error", cv = 5)
-        # Result['MSE'] = abs(result.mean())
-        # print("MSE: ", abs(result.mean()))
-        result = cross_validation.cross_val_score(clf, X, y, scoring="r2", cv = 5)
-        Result['R2'] = abs(result.mean())
-        print("R2: ", abs(result.mean()))
-        # result = cross_validation.cross_val_score(clf, X, y, scoring="neg_mean_absolute_error", cv = 5)
-        # print("MAE: ", abs(result.mean()))
-        # Result['MAE'] = abs(result.mean())
+        result = cross_validation.cross_val_score(clf, X, y, scoring="neg_mean_squared_error", cv = 5)
+        print("MSE: ", abs(result.mean()))
+        result = cross_validation.cross_val_score(clf, X, y, scoring="neg_mean_absolute_error", cv = 5)
+        print("MAE: ", abs(result.mean()))
     elif CLFType.lower() == 'classifier_binary':
         pass
     elif CLFType.lower() == 'classifier_multiclass':
         pass
 
-    return Result
-
 def evaluateAllRegressionByCrossValidation(X, y):
-    Result = {}
     for model in RegressorModel:
         if model.lower() == 'randomforestregressor':
             clf = RandomForestRegressor()
 
-        return printCrossValidationResult(clf, X, y, 'regressor')
+        printCrossValidationResult(clf, X, y, 'regressor')
 
     # For classification
 def train_and_evaluate(clf, X_train, X_test, y_train, y_test):
@@ -71,6 +63,8 @@ def train_and_evaluate(clf, X_train, X_test, y_train, y_test):
 
 def evaluateClassification(x,y,train_size=0.5):
     x_train,x_test,y_train,y_test = train_test_split(x,y,train_size=0.5)
+    # print('------------Naïve Bayes')
+    # train_and_evaluate(MultinomialNB(),x_train,x_test,y_train,y_test)
     print('------------Logistic regrassion  l2')
     train_and_evaluate(LogisticRegression(penalty='l2', C=1),x_train,x_test,y_train,y_test)
     print('------------Logistic regrassion  l1')
@@ -85,6 +79,8 @@ def evaluateClassification(x,y,train_size=0.5):
     train_and_evaluate(GaussianNB(),x_train,x_test,y_train,y_test)
 
 def crossvalidationClassification(x, y):
+    # print("---------Naïve Bayes  --------------")
+    # evaluateCrossVal(MultinomialNB(), x, y)
     print('------------Decision Tree method')
     evaluateCrossVal(DecisionTreeClassifier(), x, y)
     print('------------Extra Trees method')
@@ -98,7 +94,8 @@ def crossvalidationClassification(x, y):
     print('------------GaussianNaiveBayes method')
     evaluateCrossVal(GaussianNB(), x, y)
 
-def evaluateCrossVal(classifier, x, y):    
+def evaluateCrossVal(classifier, x, y):
+    # classifier = MultinomialNB()
     classifier.fit(x, y)
     cv_f1_scores = cross_validation.cross_val_score(classifier, x, y, cv=5, scoring='f1')
     cv_precision_scores = cross_validation.cross_val_score(classifier, x, y, cv=5,scoring='precision')
