@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.1)  5 DEC 2016 20:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.1)  6 DEC 2016 01:01
 entering extended mode
 **Final_Project_Report.tex
 
@@ -184,49 +184,183 @@ Overfull \hbox (13.33408pt too wide) in paragraph at lines 106--107
 \OT1/cmr/m/n/10 gross, num-crit-ic-for-re-views, di-rec-tor-face-book-likes, ac-tor3facebooklikes, profit]. 
  []
 
-[3] [4] <Fig/imdbhist.png, id=25, 379.4175pt x 274.02374pt>
+[3]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 116.
+
+
+Overfull \hbox (9.63939pt too wide) in paragraph at lines 120--128
+ [][] 
+ []
+
+[4] [5] [6]
+
+LaTeX Warning: Reference `fig:Top 10 actor based on numcriticforreviews.png' on page 7 undefined on input line 243.
+
+
+LaTeX Warning: Reference `Top10actorsbasedongross' on page 7 undefined on input line 245.
+
+
+LaTeX Warning: Reference `Countriesrankedontotalbudgetformovies.png' on page 7 undefined on input line 246.
+
+
+LaTeX Warning: Reference `TOP10MostProfitableMovies' on page 7 undefined on input line 248.
+
+<Fig/imdbhist.png, id=32, 379.4175pt x 274.02374pt>
 File: Fig/imdbhist.png Graphic file (type png)
  <use Fig/imdbhist.png>
-Package pdftex.def Info: Fig/imdbhist.png used on input line 143.
+Package pdftex.def Info: Fig/imdbhist.png used on input line 265.
 (pdftex.def)             Requested size: 345.0pt x 249.16965pt.
 
-<Fig/ScatterPlot.png, id=27, 497.86pt x 639.38875pt>
+<Fig/ScatterPlot.png, id=34, 497.86pt x 639.38875pt>
 File: Fig/ScatterPlot.png Graphic file (type png)
  <use Fig/ScatterPlot.png>
-Package pdftex.def Info: Fig/ScatterPlot.png used on input line 150.
+Package pdftex.def Info: Fig/ScatterPlot.png used on input line 272.
 (pdftex.def)             Requested size: 345.0pt x 443.08118pt.
 
-<Fig/Correlationoffeatures.png, id=28, 768.8725pt x 741.77126pt>
+<Fig/Correlationoffeatures.png, id=35, 768.8725pt x 741.77126pt>
 File: Fig/Correlationoffeatures.png Graphic file (type png)
  <use Fig/Correlationoffeatures.png>
-Package pdftex.def Info: Fig/Correlationoffeatures.png used on input line 157.
+Package pdftex.def Info: Fig/Correlationoffeatures.png used on input line 279.
 (pdftex.def)             Requested size: 345.0pt x 332.84323pt.
 
-<Fig/Fitplot.png, id=29, 453.695pt x 338.26375pt>
+<Fig/Fitplot.png, id=36, 453.695pt x 338.26375pt>
 File: Fig/Fitplot.png Graphic file (type png)
  <use Fig/Fitplot.png>
-Package pdftex.def Info: Fig/Fitplot.png used on input line 164.
+Package pdftex.def Info: Fig/Fitplot.png used on input line 286.
 (pdftex.def)             Requested size: 345.0pt x 257.22247pt.
+ <Fig/RFR.png, id=37, 539.8569pt x 302.8113pt>
+File: Fig/RFR.png Graphic file (type png)
 
-<Fig/suggestiongross.PNG, id=30, 344.78813pt x 131.74219pt>
+<use Fig/RFR.png>
+Package pdftex.def Info: Fig/RFR.png used on input line 293.
+(pdftex.def)             Requested size: 345.0pt x 193.51671pt.
+ <Fig/DTR.png, id=38, 535.5207pt x 302.8113pt>
+File: Fig/DTR.png Graphic file (type png)
+ <use Fig/DTR.png>
+Package pdftex.def Info: Fig/DTR.png used on input line 300.
+(pdftex.def)             Requested size: 345.0pt x 195.08768pt.
+
+<Fig/suggestiongross.PNG, id=39, 344.78813pt x 131.74219pt>
 File: Fig/suggestiongross.PNG Graphic file (type png)
  <use Fig/suggestiongross.PNG>
-Package pdftex.def Info: Fig/suggestiongross.PNG used on input line 171.
+Package pdftex.def Info: Fig/suggestiongross.PNG used on input line 307.
 (pdftex.def)             Requested size: 345.0pt x 131.82426pt.
 
-<Fig/suggestionimdbscore.PNG, id=31, 344.78813pt x 131.99312pt>
+<Fig/suggestionimdbscore.PNG, id=40, 344.78813pt x 131.99312pt>
 File: Fig/suggestionimdbscore.PNG Graphic file (type png)
  <use Fig/suggestionimdbscore.PNG>
-Package pdftex.def Info: Fig/suggestionimdbscore.PNG used on input line 178.
+Package pdftex.def Info: Fig/suggestionimdbscore.PNG used on input line 314.
 (pdftex.def)             Requested size: 345.0pt x 132.07535pt.
- [5 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Pr
-oject_Report/Fig/imdbhist.png>] [6 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Proj
-ect/DataScienceProject/Final_Project_Report/Fig/ScatterPlot.png>] [7 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_
-2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/Correlationoffeatures.png>] [8 <C:/Use
-rs/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Repor
-t/Fig/Fitplot.png> <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceP
-roject/Final_Project_Report/Fig/suggestiongross.PNG>] [9 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Sc
-ience_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/suggestionimdbscore.PNG>]
+
+<Fig/webvisualizer.pdf, id=41, 554.53604pt x 459.14435pt>
+File: Fig/webvisualizer.pdf Graphic file (type pdf)
+ <use Fig/webvisualizer.pdf>
+Package pdftex.def Info: Fig/webvisualizer.pdf used on input line 321.
+(pdftex.def)             Requested size: 345.0pt x 285.65439pt.
+
+<Fig/TOP10BestRatedMovies.png, id=42, 481.8pt x 611.28375pt>
+File: Fig/TOP10BestRatedMovies.png Graphic file (type png)
+ <use Fig/TOP10BestRatedMovies.png>
+Package pdftex.def Info: Fig/TOP10BestRatedMovies.png used on input line 328.
+(pdftex.def)             Requested size: 345.0pt x 437.72682pt.
+
+<Fig/Boxandwhiskerplotofcountriesbasedonimdbscore.png, id=43, 508.90125pt x 369.38pt>
+File: Fig/Boxandwhiskerplotofcountriesbasedonimdbscore.png Graphic file (type png)
+
+<use Fig/Boxandwhiskerplotofcountriesbasedonimdbscore.png>
+Package pdftex.def Info: Fig/Boxandwhiskerplotofcountriesbasedonimdbscore.png used on input line 335.
+(pdftex.def)             Requested size: 345.0pt x 250.42545pt.
+
+<Fig/BoxandwhiskerplotofYearsbasedonimdbscore.png, id=44, 490.83376pt x 369.38pt>
+File: Fig/BoxandwhiskerplotofYearsbasedonimdbscore.png Graphic file (type png)
+
+<use Fig/BoxandwhiskerplotofYearsbasedonimdbscore.png>
+Package pdftex.def Info: Fig/BoxandwhiskerplotofYearsbasedonimdbscore.png used on input line 342.
+(pdftex.def)             Requested size: 345.0pt x 259.64076pt.
+
+<Fig/DirectorsRankedontotalcriticreviews.png, id=45, 509.905pt x 453.695pt>
+File: Fig/DirectorsRankedontotalcriticreviews.png Graphic file (type png)
+
+<use Fig/DirectorsRankedontotalcriticreviews.png>
+Package pdftex.def Info: Fig/DirectorsRankedontotalcriticreviews.png used on input line 349.
+(pdftex.def)             Requested size: 345.0pt x 306.9855pt.
+
+<Fig/Top10actorbasedonnumcriticforreviews.png, id=46, 500.87125pt x 449.68pt>
+File: Fig/Top10actorbasedonnumcriticforreviews.png Graphic file (type png)
+
+<use Fig/Top10actorbasedonnumcriticforreviews.png>
+Package pdftex.def Info: Fig/Top10actorbasedonnumcriticforreviews.png used on input line 356.
+(pdftex.def)             Requested size: 345.0pt x 309.75119pt.
+
+<Fig/Top10actorsbasedonnumvotedusers.png, id=47, 484.81125pt x 449.68pt>
+File: Fig/Top10actorsbasedonnumvotedusers.png Graphic file (type png)
+ <use Fig/Top10actorsbasedonnumvotedusers.png>
+Package pdftex.def Info: Fig/Top10actorsbasedonnumvotedusers.png used on input line 363.
+(pdftex.def)             Requested size: 345.0pt x 320.01607pt.
+
+<Fig/Top10actorsbasedongross.png, id=48, 484.81125pt x 449.68pt>
+File: Fig/Top10actorsbasedongross.png Graphic file (type png)
+ <use Fig/Top10actorsbasedongross.png>
+Package pdftex.def Info: Fig/Top10actorsbasedongross.png used on input line 370.
+(pdftex.def)             Requested size: 345.0pt x 320.01607pt.
+
+<Fig/Countriesrankedontotalbudgetformovies.png, id=49, 499.8675pt x 418.56375pt>
+File: Fig/Countriesrankedontotalbudgetformovies.png Graphic file (type png)
+
+<use Fig/Countriesrankedontotalbudgetformovies.png>
+Package pdftex.def Info: Fig/Countriesrankedontotalbudgetformovies.png used on input line 377.
+(pdftex.def)             Requested size: 345.0pt x 288.89232pt.
+ <Fig/TOP10MostProfitableMovies.png, id=50, 481.8pt x 583.17876pt>
+File: Fig/TOP10MostProfitableMovies.png Graphic file (type png)
+
+<use Fig/TOP10MostProfitableMovies.png>
+Package pdftex.def Info: Fig/TOP10MostProfitableMovies.png used on input line 384.
+(pdftex.def)             Requested size: 345.0pt x 417.60146pt.
+ [7] [8 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Fina
+l_Project_Report/Fig/imdbhist.png>] [9 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final 
+Project/DataScienceProject/Final_Project_Report/Fig/ScatterPlot.png>] [10 <C:/Users/schttrj1/Desktop/CompBackup/Courses_
+Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/Correlationoffeatures.png>] [11 <
+C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project
+_Report/Fig/Fitplot.png> <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataSc
+ienceProject/Final_Project_Report/Fig/RFR.png>] [12 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science
+_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/DTR.png> <C:/Users/schttrj1/Desktop/CompBackup/Courses_
+Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/suggestiongross.PNG> <C:/Users/sc
+httrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig
+/suggestionimdbscore.PNG>] [13 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/
+DataScienceProject/Final_Project_Report/Fig/webvisualizer.pdf
+
+pdfTeX warning: pdflatex.exe (file C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Proje
+ct/DataScienceProject/Final_Project_Report/Fig/webvisualizer.pdf): PDF inclusion: invalid other resource which is no dic
+t (key 'ProcSets', type <array>); ignored.
+>] [14 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final
+_Project_Report/Fig/TOP10BestRatedMovies.png>] [15 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_
+Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/Boxandwhiskerplotofcountriesbasedonimdbscore.png>]
+[16 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Pr
+oject_Report/Fig/BoxandwhiskerplotofYearsbasedonimdbscore.png>] [17 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2
+016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/DirectorsRankedontotalcriticreviews.png
+>] [18 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final
+_Project_Report/Fig/Top10actorbasedonnumcriticforreviews.png>] [19 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_20
+16/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/Top10actorsbasedonnumvotedusers.png>]
+[20 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Pr
+oject_Report/Fig/Top10actorsbasedongross.png>] [21 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_
+Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/Countriesrankedontotalbudgetformovies.png>] [22 <C:/User
+s/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report
+/Fig/TOP10MostProfitableMovies.png>]
 ("C:\Users\schttrj1\Desktop\CompBackup\Courses_Fall_2016\Data_Science_Appln\Final Project\DataScienceProject\Final_Proje
 ct_Report\Final_Project_Report.aux")
 
@@ -234,24 +368,24 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2151 strings out of 493921
- 27670 string characters out of 3144867
- 79784 words of memory out of 3000000
- 5437 multiletter control sequences out of 15000+200000
- 11849 words of font info for 46 fonts, out of 3000000 for 9000
+ 2236 strings out of 493921
+ 30657 string characters out of 3144867
+ 87954 words of memory out of 3000000
+ 5509 multiletter control sequences out of 15000+200000
+ 12158 words of font info for 47 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,8n,24p,866b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,24p,866b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-
-Output written on Final_Project_Report.pdf (9 pages, 378400 bytes).
+type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Final_Project_Report.pdf (22 pages, 688001 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 174 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

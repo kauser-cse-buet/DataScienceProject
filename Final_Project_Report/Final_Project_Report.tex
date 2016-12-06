@@ -81,7 +81,7 @@ We used the IMDB 5000+ movie dataset for our project. The dataset consists of 50
 In this work we have developed regression models for predicting, \textit{imdbscore} and \textit{gross} of a movie. First we describe the analysis and methods used for \textit{imdbscore} prediction. \textit{imdbscore} is a score or rating provided to movies by critics by an online databased platform for movies, IMDB\cite{}. This score is able to quantify how popular a movie is. Figure~\ref{fig:imdb_hist} shows a histogram plot for the imdb scores. From the plot we can observe a normal distribution of the score, with a mean = 6.465$\pm$1.056, minimum value of 1.6 for the movie \textit{Justin Beiber: Never say never} and maximum of 9.3 for the movie \textit{Shawshank Redemption}. 
 In the data set, we have 28 variables, out of which there are 13 useable numeric features, namely, [directorfacebooklikes, gross, numvotedusers, numcriticforreviews, numuserforreviews, budget, moviefacebooklikes, duration, actor3facebooklikes, actor1facebooklikes, actor2facebooklikes, casttotalfacebooklikes, facenumberinposter], and we have included the profit of a movie, which is calculated by subtracting the budget from the gross. First, we have cleaned the data by dropping those samples having NaN values (using 3756 out of 5043 for modeling) and scaled all the features. For all analysis we have used the numpy, scipy, sklearn, pandas, matplotlib, seaborn and bokeh libraries of python.
 
-\subsection{Prediction of ImdbScore}
+\subsection{Prediction of IMDB Score}
 \begin{itemize}
 \item Initial step: Since this is a regression problem, we just run a simple linear regression using all the numerical features. To be noted for all the linear regression models, we have performed evaluation by running different folds of the training and test samples, that is with trainsize = 0.5, 0.66 and 0.75 and report the mean residue square value and the mean square error. We observe the following results. The mean MSE is 0.013 and mean residual square is $0.296$.
 \end{itemize}
@@ -99,18 +99,128 @@ In the data set, we have 28 variables, out of which there are 13 useable numeric
 \end{itemize}
 
 \begin{itemize}
-\item Fourth step: Next from the figure~\ref{fig:Correlationoffeatures}, we observe that some of the features are correlated to each other. For example, \textit{numvotedusers} and \textit{numcriticforreviews} have some correlation, similarly \textit{gross} and \textit{numvotedusers} have some correlation, hence in this step we have used LASSO regression, since this method does feature selection by assigning 0 coefficient for those features which are redundant and hence reduces overfitting via first norm regularization. We use aic/bic for evaluating the model. We have found the optimal alpha from a range of alpha values of the LASSO model for which the aic and bic are minimum. We performed cross validation to obtain a mean cross-validation score of 0.471. We observe an improvement from the third step.
+\item Fifth step: Next from the figure~\ref{fig:Correlationoffeatures}, we observe that some of the features are correlated to each other. For example, \textit{numvotedusers} and \textit{numcriticforreviews} have some correlation, similarly \textit{gross} and \textit{numvotedusers} have some correlation, hence in this step we have used LASSO regression, since this method does feature selection by assigning 0 coefficient for those features which are redundant and hence reduces overfitting via first norm regularization. We use aic/bic for evaluating the model. We have found the optimal alpha from a range of alpha values of the LASSO model for which the aic and bic are minimum. We performed cross validation to obtain a mean cross-validation score of 0.471. We observe an improvement from the fourth step.
 \end{itemize}
 
 \begin{itemize}
-\item Fifth step: Next we attempted using the Random Forest Resgression to perform the prediction of the \textit{imdbscore}. We performed 5-fold cross validation for the evaluation. We observed the mean cvScore to be 0.511. Another important aspect of random forest is that it provides us with the feature importance list. We note the following top 10 features for \textit{imdbscore} prediction. [numvotedusers, genres, budget, duration, numuserforreviews, gross, numcriticforreviews, directorfacebooklikes, actor3facebooklikes, profit]. 
+\item Sixth step: Next we attempted using the Random Forest Resgression to perform the prediction of the \textit{imdbscore}. We performed 5-fold cross validation for the evaluation. We observed the mean cvScore to be 0.511. Another important aspect of random forest is that it provides us with the feature importance list. We note the following top 10 features for \textit{imdbscore} prediction. [numvotedusers, genres, budget, duration, numuserforreviews, gross, numcriticforreviews, directorfacebooklikes, actor3facebooklikes, profit]. 
 \end{itemize}
 
 Hence we conclude that random forest regression works best among all the methods used to predict the value of \textit{imdbscore} given the features of a movie. Figure~\ref{fig:Fitplot} shows the fitted vs actual data plot for the three methods used. 
 
 \subsection{Prediction of Gross}
+Next we use the movie data set to predict gross of a movie. Both categorical and numerical features of the data have been used to predict gross. It has been treated as regression problem. First, data has been pre-processed. The numerical features have been scaled. We have used 5 numerical features; 3 top actors’ and director’s Facebook likes, budget, and 7 textual/categorical features; 3 top actors’ names, director’s name, country, content rating, language for gross prediction. Textual features have been labeled for each column separately and then they have been transformed to binary form. 
+
+Random Forest Regression and Decision Tree Regression has been used to predict gross. Cross Validation has been applied to evaluate the regression model performance. 5-Fold Cross Validation has used. Cross validation with Mean Absolute Error(MAE) and Mean Squared Error(MSE) has been calculated. Figure~\ref{fig:RFR} shows the plot for actual v predicted gross when using Random Forest Regression. Figure~\ref{fig:DTR} shows the plot for actual v predicted gross when using Decision tree Regression.
+
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+Evaluation Metrics  & Random Forest Regression & Decision Tree Regression \\ \hline
+Mean Absolute Error & 0.0398                   & 0.0456                   \\ \hline
+Mean Square Error   & 0.0048                   & 0.0065                   \\ \hline
+R-Square            & 0.4628                   & 0.3225                   \\ \hline
+Explained Var Score & 0.468                    & 0.265                    \\ \hline
+\end{tabular}
+\end{table}
 
 \section{Classification}
+
+In this section we discuss the two classification problems addressed in this work. First, we build classification models for prediction of high rated or popular (\textit{imdbscore} > 8) and low rated or not so popular movies (\textit{imdbscore} $\leq$ 8). Second, we also build classification models to predict profitable (\textit{profit} > 0) v not profitable movies (\textit{profit} < 0).
+
+To build the model, 11 numerical and 3 text/categorical features were used (same as used in prediction of imdbscore). 
+
+\begin{itemize}
+\item Prediction of popular or not so popular movies - First we worked with only the numerical data. Several classification models were employed. We evaluated the models via 5-Fold cross-validation. Table~\ref{tab:Classification_of_High_rated_movie} includes all the results. We observe that decision tree and random forest classifiers work the best. Next we added the text/categorical feature along with the numerical features. Table~\ref{tab:Classification_of_High_rated_movie_NC} includes all the results. Random forest classifier again performs the best. 
+\item Prediction of profitable v not profitable movies - First we worked with only the numerical data. Several classification models were employed. We evaluated the models via 5-Fold cross-validation. Table~\ref{tab:Classification_of_profit_movie} includes all the results. We observe that decision tree and logistic regression classifiers work the best. Next we added the text/categorical feature along with the numerical features. Table~\ref{tab:Classification_of_profit_movie_NC} includes all the results. Support Vector classifier again performs the best. 
+\item Observation - In both the cases we observe that classification performance drops on addition of text/categorical features. 
+\end{itemize}
+
+\begin{table}[tb]
+\caption{Classification of High rated movie(Numerical features)}
+\label{tab:Classification_of_High_rated_movie}
+\begin{center}
+\footnotesize
+\begin{tabular}{|c|c|c|c|} \hline
+%\toprule
+\textbf{Model Name}& \textbf{Precision}& \textbf{Recall} & \textbf{F1-score }   \\ \hline \hline
+Decision Tree method &	1.00	& 1.00 &	1.00\\ \hline
+Extra Trees method &	0.98	& 0.98 &	0.98\\ \hline
+Random Forest method &	1.00	&1.00&	1.00\\ \hline
+SVC method &	0.95	& 0.95 &	0.92\\ \hline
+Logit method&	0.93&	0.95&	0.93\\ \hline
+GaussianNaiveBayes method&	0.92	&0.91	&0.92\\ \hline
+
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[tb]
+\caption{Classification of High rated movie(Numerical+ categorical featuress)}
+\label{tab:Classification_of_High_rated_movie_NC}
+\begin{center}
+\footnotesize
+\begin{tabular}{|c|c|c|c|} \hline
+%\toprule
+\textbf{Model Name}& \textbf{Precision}& \textbf{Recall} & \textbf{F1-score }   \\ \hline \hline
+Decision Tree method & 0.95	 & 0.95	& 0.95\\ \hline
+Extra Trees method & 0.96 &	0.96 &	0.95\\ \hline
+Random Forest method & 0.96	& 0.96 &	0.96\\ \hline
+SVC method & 0.95 &	0.95	&0.92\\ \hline
+Logit method& 0.94	& 0.92 &	0.93\\ \hline
+GaussianNaiveBayes method & 0.95 &	0.93 &	0.94\\ \hline
+
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[tb]
+\caption{Classification of profitable movie(Numerical features)}
+\label{tab:Classification_of_profit_movie}
+\begin{center}
+\footnotesize
+\begin{tabular}{|c|c|c|c|} \hline
+%\toprule
+\textbf{Model Name}& \textbf{Precision}& \textbf{Recall} & \textbf{F1-score }   \\ \hline \hline
+Decision Tree method & 0.97 &	0.97 &	0.97 \\ \hline
+Extra Trees method & 0.86	& 0.85 &	0.85\\ \hline
+Random Forest method & 0.89 &	0.89	&0.89\\ \hline
+SVC method & 0.75 &	0.55	& 0.40\\ \hline
+Logit method &  1.00	 &1.00	& 1.00\\ \hline
+GaussianNaiveBayes method & 0.54	& 0.55	& 0.46\\ \hline
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[tb]
+\caption{Classification of profitable movie(Numerical+ categorical features)}
+\label{tab:Classification_of_profit_movie_NC}
+\begin{center}
+\footnotesize
+\begin{tabular}{|c|c|c|c|} \hline
+%\toprule
+\textbf{Model Name}& \textbf{Precision}& \textbf{Recall} & \textbf{F1-score }   \\ \hline \hline
+Decision Tree method & 0.68	& 0.68 &	0.68\\ \hline
+Extra Trees method & 0.68 &	0.68	&0.68\\ \hline
+Random Forest method & 0.70	 & 0.70 &	0.70\\ \hline
+SVC method & 0.75 &	0.55	&0.40\\ \hline
+Logit method& 0.70	& 0.70	&0.70\\ \hline
+GaussianNaiveBayes method &  0.66	& 0.56 &	0.44\\ \hline
+
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
 
 \section{Clustering}
 
@@ -123,22 +233,19 @@ We show a screen shot of the system in the figure~\ref{fig:suggestiongross} and 
 
 We developed several visualization in the process of performing exploratory analysis of the movie data set. These visualizations help us in understanding the data, extract useful information from the data and then use them for modeling purposes. 
 
-First we build a web based interactive visualizer using the \textit{bokeh} library of python. It includes various options which the user can select from in order to obtain the data visualization according to their query. For example, if one wants to know the relationship between \textit{number of critic reviews} and \textit{imdbscore} for movies starring Brad Pitt then the  user can simply select the required options to get the data visualization displayed on the web page itself. Figure shows a screen shot for this visualization. 
+First we build a web based interactive visualizer using the \textit{bokeh} library of python. It includes various options which the user can select from in order to obtain the data visualization according to their query. For example, if one wants to know the relationship between \textit{number of critic reviews} and \textit{imdbscore} for movies starring Brad Pitt then the  user can simply select the required options to get the data visualization displayed on the web page itself. Figure~\ref{fig:webvisualizer} shows a screen shot for this visualization. 
 
 Next we also developed several interesting data exploratory analysis, represented by different plots. 
 
 \begin{itemize}
-\item Top 10 rated movies based on IMDB rating - Shawshank Redemption. Figure 
-\item Box and Whisker plot to show the distribution of imdb score based on selected year and countries - The year 2007 shows highest median movie ratings. USA produces the maximum films annually however the average imdb scores is far less than those films produced in other countries. Figures
-\item Top 10 directors based on critic reviews - Steven Spielberg
-\item Top 10 actors based on critic reviews  in IMDB - Jhonny Depp on the top
-\item Top 10 actors based on number of user votes in IMDB - Morgan Freeman on the top
-\item Top 10 actors based on gross in IMDB - Robert Downey Jr. he seems to enjoy a whole lot of money
-\item Histogram of face number of posters - Interestingly we find that almost 98\% of posters have less than 5 faces. Figure.
-\item Top 10 countries having most movie budget - USA tops the list. Figure.
-\item Top 10 most profitable movies - Avatar, Jurrasic World and Titanic tops the table.
-\item Top 10 most directors making highest gross - Steven Spielberg tops the list.
-\item Top 10 most directors making highest budget - Steven Spielberg.
+\item Top 10 rated movies based on IMDB rating - Shawshank Redemption. Figure~\ref{fig:TOP 10 Best Rated Movies} displays the result.
+\item Top 10 directors based on critic reviews - Steven Spielberg tops the list Figure~\ref{fig:Directors Ranked on total critic reviews} displays the result.
+\item Top 10 actors based on critic reviews in IMDB - Jhonny Depp on the top Figure~\ref{fig:Top 10 actor based on numcriticforreviews.png} displays the result.
+\item Top 10 actors based on number of user votes in IMDB - Morgan Freeman on the top Figure~\ref{fig:Top10actorsbasedonnumvotedusers} displays the result.
+\item Top 10 actors based on gross in IMDB - Robert Downey Jr. he seems to enjoy a whole lot of money Figure~\ref{Top10actorsbasedongross} display the result.
+\item Top 10 countries having most movie budget - USA tops the list. Figure~\ref{Countriesrankedontotalbudgetformovies.png} displays the result.
+\item Box and Whisker plot to show the distribution of imdb score based on selected year and countries - The year 2007 shows highest median movie ratings. USA produces the maximum films annually however the average imdb scores is far less than those films produced in other countries. Figures~\ref{fig:Box and whisker plotofcountriesbasedonimdbscore} and ~\ref{fig:Box and whisker plotofYearsbasedonimdbscore} display the results.
+\item Top 10 profitable movies - Avatar, Jurrasic World and Titanic tops the table. Figure~\ref{TOP10MostProfitableMovies} displays the result.
 \end{itemize}
 
 \section{Contributions}
@@ -183,6 +290,20 @@ Next we also developed several interesting data exploratory analysis, represente
 
 \begin{figure}
 \centering
+\includegraphics[width=1.0\columnwidth]{Fig/RFR.png}
+\caption{Movie Recommendation according to IMDB Score}
+\label{fig:RFR}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/DTR.png}
+\caption{Movie Recommendation according to IMDB Score}
+\label{fig:DTR}
+\end{figure}
+
+\begin{figure}
+\centering
 \includegraphics[width=1.0\columnwidth]{Fig/suggestiongross.PNG}
 \caption{Movie Recommendation according to gross}
 \label{fig:suggestiongross}
@@ -194,5 +315,78 @@ Next we also developed several interesting data exploratory analysis, represente
 \caption{Movie Recommendation according to IMDB Score}
 \label{fig:suggestionimdbscore}
 \end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/webvisualizer.pdf}
+\caption{Interactive web-based Visualizer snapshot}
+\label{fig:webvisualizer}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/TOP10BestRatedMovies.png}
+\caption{Top 10 Best Rated Movies}
+\label{fig:TOP 10 Best Rated Movies}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/Boxandwhiskerplotofcountriesbasedonimdbscore.png}
+\caption{IMDB Score based on Countries}
+\label{fig:Box and whisker plotofcountriesbasedonimdbscore}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/BoxandwhiskerplotofYearsbasedonimdbscore.png}
+\caption{IMDB Score based on year}
+\label{fig:Box and whisker plotofYearsbasedonimdbscore}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/DirectorsRankedontotalcriticreviews.png}
+\caption{Top 10 Critics Choice Directors}
+\label{fig:Directors Ranked on total critic reviews}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/Top10actorbasedonnumcriticforreviews.png}
+\caption{Top 10 Critics Choice Actors}
+\label{fig:Top 10 actor based on numcriticforreviews}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/Top10actorsbasedonnumvotedusers.png}
+\caption{Top 10 User Voted Actors}
+\label{fig:Top10actorsbasedonnumvotedusers}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/Top10actorsbasedongross.png}
+\caption{Top 10 Grossing Actors}
+\label{fig:Top10actorsbasedongross}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/Countriesrankedontotalbudgetformovies.png}
+\caption{Top 10 Countries by Budget}
+\label{fig:Countriesrankedontotalbudgetformovies}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/TOP10MostProfitableMovies.png}
+\caption{Top 10 Profitable Movies}
+\label{fig:TOP10MostProfitableMovies}
+\end{figure}
+
+
+
 
 \end{document}
