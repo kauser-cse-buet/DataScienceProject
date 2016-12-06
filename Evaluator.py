@@ -75,8 +75,6 @@ def evaluateClassification(x,y,train_size=0.5):
     train_and_evaluate(ExtraTreesClassifier(),x_train,x_test,y_train,y_test)
     print('------------Random Forest method')
     train_and_evaluate(RandomForestClassifier(),x_train,x_test,y_train,y_test)
-    print('------------Logit method')
-    train_and_evaluate(LogisticRegressionCV(),x_train,x_test,y_train,y_test)
     print('------------GaussianNaiveBayes method')
     train_and_evaluate(GaussianNB(),x_train,x_test,y_train,y_test)
 
@@ -89,8 +87,10 @@ def crossvalidationClassification(x, y):
     evaluateCrossVal(ExtraTreesClassifier(), x, y)
     print('------------Random Forest method')
     evaluateCrossVal(RandomForestClassifier(), x, y)
-    print('------------Logit method')
-    evaluateCrossVal(LogisticRegressionCV(), x, y)
+    print('------------Logistic regrassion  l2')
+    evaluateCrossVal(LogisticRegression(penalty='l2', C=1),x,y)
+    print('------------Logistic regrassion  l1')
+    evaluateCrossVal(LogisticRegression(penalty='l1', C=1),x,y)
     print('------------GaussianNaiveBayes method')
     evaluateCrossVal(GaussianNB(), x, y)
 
