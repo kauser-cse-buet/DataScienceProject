@@ -129,7 +129,7 @@ Explained Var Score & 0.468                    & 0.265                    \\ \hl
 
 \section{Classification}
 
-In this section we discuss the two classification problems addressed in this work. First, we build classification models for prediction of high rated or popular (\textit{imdbscore} > 8) and low rated or not so popular movies (\textit{imdbscore} $\leq$ 8). Second, we also build classification models to predict profitable (\textit{profit} > 0) v not profitable movies (\textit{profit} < 0).
+In this section we discuss the two classification problems addressed in this work. First, we build classification models for prediction of high rated or popular (\textit{imdbscore} $>$ 8) and low rated or not so popular movies (\textit{imdbscore} $\leq$ 8). Second, we also build classification models to predict profitable (\textit{profit} $>$ 0) v not profitable movies (\textit{profit} $<$ 0).
 
 To build the model, 11 numerical and 3 text/categorical features were used (same as used in prediction of imdbscore). 
 
@@ -246,6 +246,7 @@ Next we also developed several interesting data exploratory analysis, represente
 \item Top 10 countries having most movie budget - USA tops the list. Figure~\ref{Countriesrankedontotalbudgetformovies.png} displays the result.
 \item Box and Whisker plot to show the distribution of imdb score based on selected year and countries - The year 2007 shows highest median movie ratings. USA produces the maximum films annually however the average imdb scores is far less than those films produced in other countries. Figures~\ref{fig:Box and whisker plotofcountriesbasedonimdbscore} and ~\ref{fig:Box and whisker plotofYearsbasedonimdbscore} display the results.
 \item Top 10 profitable movies - Avatar, Jurrasic World and Titanic tops the table. Figure~\ref{TOP10MostProfitableMovies} displays the result.
+\item Histogram of face number of posters - Interestingly we find that almost 98\% of posters have less than 5 faces. Figure~\ref{webvisualizer} displays the result.
 \end{itemize}
 
 \section{Contributions}
