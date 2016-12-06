@@ -1,0 +1,91 @@
+,R2,Target,Text Features
+0,0.040430231,imdb_score,['plot_keywords']
+1,0.505322461,gross,['plot_keywords']
+2,0.102008021,imdb_score,"['plot_keywords', 'genres']"
+3,0.330490129,gross,"['plot_keywords', 'genres']"
+4,0.141500709,imdb_score,"['plot_keywords', 'genres', 'director_name']"
+5,0.181766446,gross,"['plot_keywords', 'genres', 'director_name']"
+6,0.112801463,imdb_score,"['plot_keywords', 'genres', 'director_name', 'actor_1_name']"
+7,0.159452374,gross,"['plot_keywords', 'genres', 'director_name', 'actor_1_name']"
+8,0.141444101,imdb_score,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title']"
+9,0.123877346,gross,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title']"
+10,0.123476154,imdb_score,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name']"
+11,0.124571181,gross,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name']"
+12,0.141212722,imdb_score,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language']"
+13,0.123398518,gross,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language']"
+14,0.11715397,imdb_score,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country']"
+15,0.08815629,gross,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country']"
+16,0.128316528,imdb_score,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country', 'color']"
+17,0.12953762,gross,"['plot_keywords', 'genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country', 'color']"
+18,0.035114585,imdb_score,['genres']
+19,0.438328831,gross,['genres']
+20,0.12554876,imdb_score,"['genres', 'director_name']"
+21,0.218259348,gross,"['genres', 'director_name']"
+22,0.116346185,imdb_score,"['genres', 'director_name', 'actor_1_name']"
+23,0.096774393,gross,"['genres', 'director_name', 'actor_1_name']"
+24,0.124500372,imdb_score,"['genres', 'director_name', 'actor_1_name', 'movie_title']"
+25,0.099577357,gross,"['genres', 'director_name', 'actor_1_name', 'movie_title']"
+26,0.124883965,imdb_score,"['genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name']"
+27,0.078243799,gross,"['genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name']"
+28,0.125892199,imdb_score,"['genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language']"
+29,0.130323506,gross,"['genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language']"
+30,0.10709086,imdb_score,"['genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country']"
+31,0.071376072,gross,"['genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country']"
+32,0.133487617,imdb_score,"['genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country', 'color']"
+33,0.064860643,gross,"['genres', 'director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country', 'color']"
+34,0.022964161,imdb_score,['director_name']
+35,0.500861175,gross,['director_name']
+36,0.00952602,imdb_score,"['director_name', 'actor_1_name']"
+37,0.477424201,gross,"['director_name', 'actor_1_name']"
+38,0.007666003,imdb_score,"['director_name', 'actor_1_name', 'movie_title']"
+39,0.253920871,gross,"['director_name', 'actor_1_name', 'movie_title']"
+40,0.025005263,imdb_score,"['director_name', 'actor_1_name', 'movie_title', 'actor_3_name']"
+41,0.275090599,gross,"['director_name', 'actor_1_name', 'movie_title', 'actor_3_name']"
+42,0.000495797,imdb_score,"['director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language']"
+43,0.236505171,gross,"['director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language']"
+44,0.011289365,imdb_score,"['director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country']"
+45,0.187677705,gross,"['director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country']"
+46,0.02278531,imdb_score,"['director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country', 'color']"
+47,0.213083655,gross,"['director_name', 'actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country', 'color']"
+48,0.136940207,imdb_score,['actor_1_name']
+49,0.758232465,gross,['actor_1_name']
+50,0.092952558,imdb_score,"['actor_1_name', 'movie_title']"
+51,0.410274597,gross,"['actor_1_name', 'movie_title']"
+52,0.087366607,imdb_score,"['actor_1_name', 'movie_title', 'actor_3_name']"
+53,0.354159396,gross,"['actor_1_name', 'movie_title', 'actor_3_name']"
+54,0.045460918,imdb_score,"['actor_1_name', 'movie_title', 'actor_3_name', 'language']"
+55,0.391300355,gross,"['actor_1_name', 'movie_title', 'actor_3_name', 'language']"
+56,0.014714735,imdb_score,"['actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country']"
+57,0.229455308,gross,"['actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country']"
+58,0.010151108,imdb_score,"['actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country', 'color']"
+59,0.284560012,gross,"['actor_1_name', 'movie_title', 'actor_3_name', 'language', 'country', 'color']"
+60,0.097500178,imdb_score,['movie_title']
+61,0.54549311,gross,['movie_title']
+62,0.119412905,imdb_score,"['movie_title', 'actor_3_name']"
+63,0.466697276,gross,"['movie_title', 'actor_3_name']"
+64,0.063121982,imdb_score,"['movie_title', 'actor_3_name', 'language']"
+65,0.467760743,gross,"['movie_title', 'actor_3_name', 'language']"
+66,0.03941468,imdb_score,"['movie_title', 'actor_3_name', 'language', 'country']"
+67,0.376373692,gross,"['movie_title', 'actor_3_name', 'language', 'country']"
+68,0.045222073,imdb_score,"['movie_title', 'actor_3_name', 'language', 'country', 'color']"
+69,0.348261217,gross,"['movie_title', 'actor_3_name', 'language', 'country', 'color']"
+70,0.200678667,imdb_score,['actor_3_name']
+71,2.472502278,gross,['actor_3_name']
+72,0.125664463,imdb_score,"['actor_3_name', 'language']"
+73,0.751532255,gross,"['actor_3_name', 'language']"
+74,0.123065186,imdb_score,"['actor_3_name', 'language', 'country']"
+75,0.654048948,gross,"['actor_3_name', 'language', 'country']"
+76,0.118361016,imdb_score,"['actor_3_name', 'language', 'country', 'color']"
+77,0.605329414,gross,"['actor_3_name', 'language', 'country', 'color']"
+78,0.012641185,imdb_score,['language']
+79,0.539169516,gross,['language']
+80,0.025312075,imdb_score,"['language', 'country']"
+81,0.527011649,gross,"['language', 'country']"
+82,0.034011229,imdb_score,"['language', 'country', 'color']"
+83,0.551176125,gross,"['language', 'country', 'color']"
+84,0.005125781,imdb_score,['country']
+85,0.531726117,gross,['country']
+86,0.010075144,imdb_score,"['country', 'color']"
+87,0.549724724,gross,"['country', 'color']"
+88,0.002756373,imdb_score,['color']
+89,0.573560466,gross,['color']
