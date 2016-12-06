@@ -55,7 +55,7 @@
 \begin{document}
 
 \title{Exploring and Modeling with the IMDB Movie Dataset}
-\author{
+\author{Sayma Akther, Md. Kauser Ahmmed, Soujanya Chatterjee, Anjana Tiha, Md. Azim Ullah
 \\University of Memphis}
 \date{December 06, 2016}
 \maketitle
@@ -97,8 +97,8 @@ We used the IMDB 5000+ movie dataset for our project. The dataset consists of 50
 
 [movietitle, color, numcriticforreviews, moviefacebooklikes, duration, directorname, directorfacebooklikes, actor3name, actor3facebooklikes, actor2name, actor2facebooklikes, actor1name, actor1facebooklikes, gross, genres, numvotedusers, casttotalfacebooklikes, facenumberinposter, plotkeywords, movieimdblink, numuserforreviews, language, country, contentrating, budget titleyear, imdbscore, aspectratio.]
 
-\section{Methodologies}
-\subsection{Regression or 'Value' Prediction}
+\section{Methods and Experimental Evaluation}
+\section{Regression or 'Value' Prediction}
 In this work we have developed regression models for predicting, \textit{imdbscore} and \textit{gross} of a movie. First we describe the analysis and methods used for \textit{imdbscore} prediction. \textit{imdbscore} is a score or rating provided to movies by critics by an online databased platform for movies, IMDB\cite{}. This score is able to quantify how popular a movie is. Figure~\ref{fig:imdb_hist} shows a histogram plot for the imdb scores. From the plot we can observe a normal distribution of the score, with a mean = 6.465$\pm$1.056, minimum value of 1.6 for the movie \textit{Justin Beiber: Never say never} and maximum of 9.3 for the movie \textit{Shawshank Redemption}. 
 In the data set, we have 28 variables, out of which there are 13 useable numeric features, namely, [directorfacebooklikes, gross, numvotedusers, numcriticforreviews, numuserforreviews, budget, moviefacebooklikes, duration, actor3facebooklikes, actor1facebooklikes, actor2facebooklikes, casttotalfacebooklikes, facenumberinposter], and we have included the profit of a movie, which is calculated by subtracting the budget from the gross. First, we have cleaned the data by dropping those samples having NaN values (using 3756 out of 5043 for modeling) and scaled all the features. For all analysis we have used the numpy, scipy, sklearn, pandas, matplotlib, seaborn and bokeh libraries of python.
 
@@ -138,6 +138,18 @@ Hence we conclude that random forest regression works best among all the methods
 
 \subsection{Prediction of Gross}
 
+\section{Classification}
 
+\section{Clustering}
+
+\section{Visualization}
+
+\section{Contributions}
+
+1. Sayma Akther - 
+2. Md. Kauser Ahmmed - 
+3. Soujanya Chatterjee - 
+4. Anjana Tiha - 
+5. Md. Azim Ullah - 
 
 \end{document}
