@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.1)  5 DEC 2016 19:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.1)  5 DEC 2016 20:40
 entering extended mode
 **Final_Project_Report.tex
 
@@ -159,61 +159,74 @@ LaTeX Font Info:    ... okay on input line 55.
 \makeMPintoPDFobject=\count106
 \everyMPtoPDFconversion=\toks21
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 61.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 61.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) <Fig/imdbhist.png, id=1, 379.4175pt x 274.02374pt>
-File: Fig/imdbhist.png Graphic file (type png)
-
-<use Fig/imdbhist.png>
-Package pdftex.def Info: Fig/imdbhist.png used on input line 65.
-(pdftex.def)             Requested size: 345.0pt x 249.16965pt.
- <Fig/ScatterPlot.png, id=3, 497.86pt x 639.38875pt>
-File: Fig/ScatterPlot.png Graphic file (type png)
- <use Fig/ScatterPlot.png>
-Package pdftex.def Info: Fig/ScatterPlot.png used on input line 72.
-(pdftex.def)             Requested size: 345.0pt x 443.08118pt.
-
-<Fig/Correlationoffeatures.png, id=4, 768.8725pt x 741.77126pt>
-File: Fig/Correlationoffeatures.png Graphic file (type png)
- <use Fig/Correlationoffeatures.png>
-Package pdftex.def Info: Fig/Correlationoffeatures.png used on input line 79.
-(pdftex.def)             Requested size: 345.0pt x 332.84323pt.
-
-<Fig/Fitplot.png, id=5, 453.695pt x 338.26375pt>
-File: Fig/Fitplot.png Graphic file (type png)
- <use Fig/Fitplot.png>
-Package pdftex.def Info: Fig/Fitplot.png used on input line 86.
-(pdftex.def)             Requested size: 345.0pt x 257.22247pt.
- [1
+) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Reference `fig:imdb_hist' on page 2 undefined on input line 109.
+LaTeX Warning: Reference `fig:imdb_hist' on page 2 undefined on input line 81.
 
-[2 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Pro
-ject_Report/Fig/imdbhist.png>] [3 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Proje
-ct/DataScienceProject/Final_Project_Report/Fig/ScatterPlot.png>] [4 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2
-016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/Correlationoffeatures.png>] [5 <C:/User
-s/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report
-/Fig/Fitplot.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
- [6]
-Overfull \hbox (13.33408pt too wide) in paragraph at lines 134--135
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
+ [2]
+Overfull \hbox (13.33408pt too wide) in paragraph at lines 106--107
 \OT1/cmr/m/n/10 gross, num-crit-ic-for-re-views, di-rec-tor-face-book-likes, ac-tor3facebooklikes, profit]. 
  []
 
-[7]
+[3] [4] <Fig/imdbhist.png, id=25, 379.4175pt x 274.02374pt>
+File: Fig/imdbhist.png Graphic file (type png)
+ <use Fig/imdbhist.png>
+Package pdftex.def Info: Fig/imdbhist.png used on input line 143.
+(pdftex.def)             Requested size: 345.0pt x 249.16965pt.
+
+<Fig/ScatterPlot.png, id=27, 497.86pt x 639.38875pt>
+File: Fig/ScatterPlot.png Graphic file (type png)
+ <use Fig/ScatterPlot.png>
+Package pdftex.def Info: Fig/ScatterPlot.png used on input line 150.
+(pdftex.def)             Requested size: 345.0pt x 443.08118pt.
+
+<Fig/Correlationoffeatures.png, id=28, 768.8725pt x 741.77126pt>
+File: Fig/Correlationoffeatures.png Graphic file (type png)
+ <use Fig/Correlationoffeatures.png>
+Package pdftex.def Info: Fig/Correlationoffeatures.png used on input line 157.
+(pdftex.def)             Requested size: 345.0pt x 332.84323pt.
+
+<Fig/Fitplot.png, id=29, 453.695pt x 338.26375pt>
+File: Fig/Fitplot.png Graphic file (type png)
+ <use Fig/Fitplot.png>
+Package pdftex.def Info: Fig/Fitplot.png used on input line 164.
+(pdftex.def)             Requested size: 345.0pt x 257.22247pt.
+
+<Fig/suggestiongross.PNG, id=30, 344.78813pt x 131.74219pt>
+File: Fig/suggestiongross.PNG Graphic file (type png)
+ <use Fig/suggestiongross.PNG>
+Package pdftex.def Info: Fig/suggestiongross.PNG used on input line 171.
+(pdftex.def)             Requested size: 345.0pt x 131.82426pt.
+
+<Fig/suggestionimdbscore.PNG, id=31, 344.78813pt x 131.99312pt>
+File: Fig/suggestionimdbscore.PNG Graphic file (type png)
+ <use Fig/suggestionimdbscore.PNG>
+Package pdftex.def Info: Fig/suggestionimdbscore.PNG used on input line 178.
+(pdftex.def)             Requested size: 345.0pt x 132.07535pt.
+ [5 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Pr
+oject_Report/Fig/imdbhist.png>] [6 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Proj
+ect/DataScienceProject/Final_Project_Report/Fig/ScatterPlot.png>] [7 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_
+2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/Correlationoffeatures.png>] [8 <C:/Use
+rs/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceProject/Final_Project_Repor
+t/Fig/Fitplot.png> <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Science_Appln/Final Project/DataScienceP
+roject/Final_Project_Report/Fig/suggestiongross.PNG>] [9 <C:/Users/schttrj1/Desktop/CompBackup/Courses_Fall_2016/Data_Sc
+ience_Appln/Final Project/DataScienceProject/Final_Project_Report/Fig/suggestionimdbscore.PNG>]
 ("C:\Users\schttrj1\Desktop\CompBackup\Courses_Fall_2016\Data_Science_Appln\Final Project\DataScienceProject\Final_Proje
 ct_Report\Final_Project_Report.aux")
 
@@ -221,22 +234,24 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2138 strings out of 493921
- 27340 string characters out of 3144867
- 79768 words of memory out of 3000000
- 5427 multiletter control sequences out of 15000+200000
+ 2151 strings out of 493921
+ 27670 string characters out of 3144867
+ 79784 words of memory out of 3000000
+ 5437 multiletter control sequences out of 15000+200000
  11849 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,24p,866b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,24p,866b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmti10.pfb>
-Output written on Final_Project_Report.pdf (7 pages, 229942 bytes).
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+
+Output written on Final_Project_Report.pdf (9 pages, 378400 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

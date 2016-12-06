@@ -55,40 +55,19 @@
 \begin{document}
 
 \title{Exploring and Modeling with the IMDB Movie Dataset}
-\author{Sayma Akther, Md. Kauser Ahmmed, Soujanya Chatterjee, Anjana Tiha, Md. Azim Ullah
+\author{Sayma Akther, Md. Kauser Ahmmed, 
+\\Soujanya Chatterjee, Anjana Tiha, Md. Azim Ullah
 \\University of Memphis}
 \date{December 06, 2016}
 \maketitle
 
-\begin{figure}
-\centering
-\includegraphics[width=1.0\columnwidth]{Fig/imdbhist.png}
-\caption{Histogram plot for imdbscore}
-\label{fig:imdbhist}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1.0\columnwidth]{Fig/ScatterPlot.png}
-\caption{Scatter plot for imdbscore v numerical features}
-\label{fig:scatter}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1.0\columnwidth]{Fig/Correlationoffeatures.png}
-\caption{Correlation of Numerical features}
-\label{fig:Correlationoffeatures}
-\end{figure}
-
-
 \section{Introduction}
 
-Movies can be of different stories, genre, from different countries, having different actors (both male and female), directors and others. There are several sources in the internet today that stream our favorite movies on demand, that is whenever you want and as often you want, Netflix for example. We all love to watch movies. It is one of the best entertainer during the leisure hours. 
+Movies can be of different stories, genre, from different countries, having different actors (both male and female), directors and others. There are several sources in the internet today that stream our favorite movies on demand, that is whenever you want and as often you want, Netflix for example. We all love to watch movies. It is one of the best entertainer during the leisure hours. \footnote{Please find all the figures in the Appendix section below}
 
 \subsection{Goal Description}
 
-We are interested to predict whether a movie is going to be popular or not or what will the gross income of a particular movie before its release or what will be the IMDB score of a movie or to suggest you a movie quite similar to the one who have just watched. This seems to be exciting, since based on our relied prediction one (from the audience) can go and watch a movie (predicted to be popular and entertaining) or based on the prediction of the gross, the movie makers can change their marketing regime for a particular movie,  before its release. 
+To predict whether a movie is going to be popular or not or what will the gross income of a particular movie before its release or what will be the IMDB score of a movie or to suggest you a movie quite similar to the one who have just watched. This seems to be exciting, since based on our relied prediction one (from the audience) can go and watch a movie (predicted to be popular and entertaining) or based on the prediction of the gross, the movie makers can change their marketing regime for their next movie given the features. This work will be useful to both the audience and the movie makers. 
 In this work, we have done an exploratory analysis and modeling with IMDB movie data set available in an online data science platform, Kaggle. Namely, we have performed visualization, 'value' prediction or regression in the form of predicting the imdb score and gross of a movie, 'class' prediction or classification in the form of predicting the popularity of a movie, and clustering in the form of a basic recommender system.
 
 \subsection{DataSet Description}
@@ -112,7 +91,7 @@ In the data set, we have 28 variables, out of which there are 13 useable numeric
 \end{itemize}
 
 \begin{itemize}
-\item Third step: Next we observe that there are a few text features that might be useful in predicting the \textit{imdbscore}, namely \textit{genre}, \textit{plotkeywords} and \textit{country}, we need to add these to the numerical features. For this, first we obtain the tfidf scores with the tfidf vectorizer and use todense() to convert each feature from sparse to dense matrix. Next we append these feature along with the numerical features to obtain a new feature list to predict the \textit{imdbscore}. We observe the following results. The mean MSE is 0.011 and mean residual square is 0.455. We observe an improvement from the second step.
+\item Third step: Next we observe that there are a few text features that might be useful in predicting the \textit{imdbscore}, namely \textit{genre}, \textit{plotkeywords} and \textit{country} since they fit the \textit{imdbscore} better than the other text/categorical features (MSE = 0.016 and residue squared = 0.1). We need to add these to the numerical features. For this, first we obtain the tfidf scores with the tfidf vectorizer and use todense() to convert each feature from sparse to dense matrix. Next we append these feature along with the numerical features to obtain a new feature list to predict the \textit{imdbscore}. We observe the following results. The mean MSE is 0.011 and mean residual square is 0.455. We observe an improvement from the second step.
 \end{itemize}
 
 \begin{itemize}
@@ -127,13 +106,6 @@ In the data set, we have 28 variables, out of which there are 13 useable numeric
 \item Fifth step: Next we attempted using the Random Forest Resgression to perform the prediction of the \textit{imdbscore}. We performed 5-fold cross validation for the evaluation. We observed the mean cvScore to be 0.511. Another important aspect of random forest is that it provides us with the feature importance list. We note the following top 10 features for \textit{imdbscore} prediction. [numvotedusers, genres, budget, duration, numuserforreviews, gross, numcriticforreviews, directorfacebooklikes, actor3facebooklikes, profit]. 
 \end{itemize}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.0\columnwidth]{Fig/Fitplot.png}
-\caption{Fitted vs Actual data plot}
-\label{fig:Fitplot}
-\end{figure}
-
 Hence we conclude that random forest regression works best among all the methods used to predict the value of \textit{imdbscore} given the features of a movie. Figure~\ref{fig:Fitplot} shows the fitted vs actual data plot for the three methods used. 
 
 \subsection{Prediction of Gross}
@@ -142,14 +114,85 @@ Hence we conclude that random forest regression works best among all the methods
 
 \section{Clustering}
 
+We used clustering to build a simple movie recommender system. Consider a scenario, where an user would like to find a similar movie to the one he/she has already watched, based on \textit{genre}, \textit{plot key words}, \textit{cast and crews}. This system will be able to suggest top 10 similar movie given the movie watched based on k-means clustering algorithm. 
+To build the system, first we produce unique clusters given the features, \textit{genre}, \textit{plot key words}, \textit{cast and crews}, where \textit{cast and crews} includes all the actors and directors. Next, given a movie, we search for other movie in the cluster. Once we have the movie list, then we suggest to the user the top 10 best movies based on their \textit{imdbscore} or \textit{gross}. We also have the autocorrect feature, that is if the movie provided is not in the database, then we suggest the best matches with respect to the provided title. 
+We show a screen shot of the system in the figure~\ref{fig:suggestiongross} and figure~\ref{fig:suggestionimdbscore} 
+
+
 \section{Visualization}
+
+We developed several visualization in the process of performing exploratory analysis of the movie data set. These visualizations help us in understanding the data, extract useful information from the data and then use them for modeling purposes. 
+
+First we build a web based interactive visualizer using the \textit{bokeh} library of python. It includes various options which the user can select from in order to obtain the data visualization according to their query. For example, if one wants to know the relationship between \textit{number of critic reviews} and \textit{imdbscore} for movies starring Brad Pitt then the  user can simply select the required options to get the data visualization displayed on the web page itself. Figure shows a screen shot for this visualization. 
+
+Next we also developed several interesting data exploratory analysis, represented by different plots. 
+
+\begin{itemize}
+\item Top 10 rated movies based on IMDB rating - Shawshank Redemption. Figure 
+\item Box and Whisker plot to show the distribution of imdb score based on selected year and countries - The year 2007 shows highest median movie ratings. USA produces the maximum films annually however the average imdb scores is far less than those films produced in other countries. Figures
+\item Top 10 directors based on critic reviews - Steven Spielberg
+\item Top 10 actors based on critic reviews  in IMDB - Jhonny Depp on the top
+\item Top 10 actors based on number of user votes in IMDB - Morgan Freeman on the top
+\item Top 10 actors based on gross in IMDB - Robert Downey Jr. he seems to enjoy a whole lot of money
+\item Histogram of face number of posters - Interestingly we find that almost 98\% of posters have less than 5 faces. Figure.
+\item Top 10 countries having most movie budget - USA tops the list. Figure.
+\item Top 10 most profitable movies - Avatar, Jurrasic World and Titanic tops the table.
+\item Top 10 most directors making highest gross - Steven Spielberg tops the list.
+\item Top 10 most directors making highest budget - Steven Spielberg.
+\end{itemize}
 
 \section{Contributions}
 
-1. Sayma Akther - 
-2. Md. Kauser Ahmmed - 
-3. Soujanya Chatterjee - 
-4. Anjana Tiha - 
-5. Md. Azim Ullah - 
+\begin{itemize}
+\item Sayma Akther - 
+\item Md. Kauser Ahmmed - 
+\item Soujanya Chatterjee - 
+\item Anjana Tiha - 
+\item Md. Azim Ullah -
+\end{itemize}
+
+\section{Apendix}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/imdbhist.png}
+\caption{Histogram plot for imdbscore}
+\label{fig:imdbhist}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/ScatterPlot.png}
+\caption{Scatter plot for imdbscore v numerical features}
+\label{fig:scatter}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/Correlationoffeatures.png}
+\caption{Correlation of Numerical features}
+\label{fig:Correlationoffeatures}
+\end{figure} 
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/Fitplot.png}
+\caption{Fitted vs Actual data plot}
+\label{fig:Fitplot}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/suggestiongross.PNG}
+\caption{Movie Recommendation according to gross}
+\label{fig:suggestiongross}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{Fig/suggestionimdbscore.PNG}
+\caption{Movie Recommendation according to IMDB Score}
+\label{fig:suggestionimdbscore}
+\end{figure}
 
 \end{document}
