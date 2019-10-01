@@ -71,15 +71,15 @@ R^2 Score              : 0.459857366497
 - genre wise budget, profit, imdb score.
 
 ### kauser part (for paper):
-- inclusion of text feature with soujanya. 
-- inclusion of different statistics with aungkon.
-- Implement movie suggestion system.
--- cluster movie with plot, genre, cast and crew text features.
--- predict cluster centroid for the user given movie.
--- get other movies in that cluster.
--- sort the movies based on imdb score or gross (user can select one of them).
--- suggest the movies to the user.
--- If user given movie is not in database, show movie names title matched with maximum percentage with user given movie.
+* inclusion of text feature with soujanya. 
+* inclusion of different statistics with aungkon.
+* Implement movie suggestion system.
+  * cluster movie with plot, genre, cast and crew text features.
+  * predict cluster centroid for the user given movie.
+  * get other movies in that cluster.
+  * sort the movies based on imdb score or gross (user can select one of them).
+  * suggest the movies to the user.
+  * If user given movie is not in database, show movie names title matched with maximum percentage with user given movie.
 
 
 
